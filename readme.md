@@ -33,13 +33,14 @@ GreatWall是一个.net core平台下的权限管理系统，使用Util应用框�
 
 - 集成
   - [Identity](https://docs.microsoft.com/zh-cn/aspnet/core/security/authentication/identity?tabs=visual-studio%2Caspnetcore2x)
-  - [Identity Server](https://identityserver4.readthedocs.io/en/release/)
+  - [Identity Server](https://identityserver4.readthedocs.io/en/latest/)
 
 - 应用框架
   - [Util](https://github.com/dotnetcore/Util)
 
 - UI
   - [Ng-Zorro](https://ng.ant.design)
+  - [Ng-Alain](https://ng-alain.github.io/ng-alain/)
 
 ## 作者
 
@@ -63,7 +64,7 @@ GreatWall是一个.net core平台下的权限管理系统，使用Util应用框�
 
 ## 开源地址
 
-https://github.com/UtilCore/GreatWall
+https://github.com/Util-Core/GreatWall
 
 ## License
 
@@ -74,3 +75,7 @@ https://github.com/UtilCore/GreatWall
 ## 书单
 
 - 《OAuth 2实战》 作者：Justin Richer
+
+## 参考
+
+- [IdentityServer4.Admin](https://github.com/zlzforever/IdentityServer4.Admin)
