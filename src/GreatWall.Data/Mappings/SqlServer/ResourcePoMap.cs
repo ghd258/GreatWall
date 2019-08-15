@@ -6,7 +6,7 @@ namespace GreatWall.Data.Mappings.SqlServer {
     /// <summary>
     /// 资源映射配置
     /// </summary>
-    public class ResourceMap : Util.Datas.Ef.SqlServer.AggregateRootMap<ResourcePo> {
+    public class ResourcePoMap : Util.Datas.Ef.SqlServer.AggregateRootMap<ResourcePo> {
         /// <summary>
         /// 映射表
         /// </summary>

@@ -2,7 +2,6 @@
 using GreatWall.Authentications;
 using GreatWall.Configs;
 using GreatWall.Data;
-using GreatWall.Data.UnitOfWorks.SqlServer;
 using GreatWall.Domain.Models;
 using GreatWall.Service.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -42,8 +41,10 @@ namespace GreatWall {
             //添加NLog日志操作
             services.AddNLog();
 
-            //添加工作单元
-            services.AddUnitOfWork<IGreatWallUnitOfWork, GreatWallUnitOfWork>( Configuration.GetConnectionString( "DefaultConnection" ) );
+            //添加SqlServer工作单元
+            services.AddUnitOfWork<IGreatWallUnitOfWork, Data.UnitOfWorks.SqlServer.GreatWallUnitOfWork>( Configuration.GetConnectionString( "DefaultConnection" ) );
+            //添加PgSql工作单元
+            //services.AddUnitOfWork<IGreatWallUnitOfWork, Data.UnitOfWorks.PgSql.GreatWallUnitOfWork>( Configuration.GetConnectionString( "PgSqlConnection" ) );
 
             //添加权限服务
             services.AddPermission();
@@ -51,9 +52,9 @@ namespace GreatWall {
             //配置Identity Server
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
-                .AddInMemoryIdentityResources( Config.GetIdentityResources() )
-                .AddInMemoryApiResources( Config.GetApiResources() )
-                .AddInMemoryClients( Config.GetClients() )
+                .AddResourceStore<ResourceStore>()
+                .AddClientStore<ClientStore>()
+                .AddCorsPolicyService<CorsPolicyService>()
                 .AddAspNetIdentity<User>()
                 .AddResourceOwnerValidator<ResourceValidator>()
                 .AddProfileService<ProfileService>();

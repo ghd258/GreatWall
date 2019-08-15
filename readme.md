@@ -78,4 +78,5 @@ https://github.com/Util-Core/GreatWall
 
 ## 参考
 
+- [IdentityServer4.Admin](https://github.com/skoruba/IdentityServer4.Admin)
 - [IdentityServer4.Admin](https://github.com/zlzforever/IdentityServer4.Admin)

@@ -5,11 +5,41 @@
 @*表单*@
 <util-card show-border="false">
     <util-form id="form" label-span="4" control-span="20" gutter="16">
-        <util-textbox for="Code"></util-textbox>
-        <util-textbox for="Name"></util-textbox>
-        <util-switch for="Enabled"></util-switch>
-        <util-switch for="RegisterEnabled"></util-switch>
-        <util-textarea for="Remark"></util-textarea>
+        <util-radio for="ApplicationType" on-change="changeApplicationType($event)"></util-radio>
+        <util-container ng-if="isClient">
+            <util-tabs>
+                <util-tab title="基础信息">
+                    <util-textbox for="Code"></util-textbox>
+                    <util-textbox for="Name"></util-textbox>
+                    <util-switch for="Enabled"></util-switch>
+                    <util-select for="AllowedGrantType"></util-select>
+                    <util-select for="AllowedScopes" multiple="true" url="/api/application/scopes"></util-select>
+                    <util-textarea for="Remark"></util-textarea>
+                </util-tab>
+                <util-tab title="客户端密钥">
+                    <util-switch for="RequireClientSecret"></util-switch>
+                    <partial name="Edit/ClientSecret" />
+                </util-tab>
+                <util-tab title="认证/注销">
+                    <util-textbox for="RedirectUri"></util-textbox>
+                    <util-textbox for="PostLogoutRedirectUri"></util-textbox>
+                </util-tab>
+                <util-tab title="令牌">
+                    <util-textbox for="AccessTokenLifetime"></util-textbox>
+                    <util-switch for="AllowAccessTokensViaBrowser"></util-switch>
+                    <util-select for="AllowedCorsOrigins" tags="true"></util-select>
+                </util-tab>
+                <util-tab title="同意屏幕">
+                    <util-switch for="RequireConsent"></util-switch>
+                </util-tab>
+            </util-tabs>
+        </util-container>
+        <util-container ng-if="!isClient">
+            <util-textbox for="Code"></util-textbox>
+            <util-textbox for="Name"></util-textbox>
+            <util-switch for="Enabled"></util-switch>
+            <util-textarea for="Remark"></util-textarea>
+        </util-container>
         <util-form-item justify="End">
             <util-form-control class="w-auto">
                 <util-button class="mr-sm" text="取消" on-click="close()"></util-button>

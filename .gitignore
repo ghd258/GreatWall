@@ -26,3 +26,5 @@
 /test/GreatWall.Tests.Integration/bin
 /test/GreatWall.Tests.Integration/obj
 /src/GreatWall.AuthenticationServer/*.user
+/document/数据模型/*.pdb
+/document/数据模型/*.sws

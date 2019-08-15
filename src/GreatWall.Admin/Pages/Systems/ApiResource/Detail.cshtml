@@ -1,0 +1,16 @@
+﻿@page
+@model ApiResourceDto
+@*标题*@
+<page-header title="Api资源详情" [autoBreadcrumb]="false"></page-header>
+@*表单*@
+<util-card show-border="false">
+    <util-description column="4" show-border="true">
+        <util-description-item for="Uri" span="4"></util-description-item>
+        <util-description-item for="Name" span="4"></util-description-item>
+        <util-description-item for="ClaimsDisplay" span="4"></util-description-item>
+        <util-description-item for="Enabled"></util-description-item>
+        <util-description-item for="SortId"></util-description-item>
+        <util-description-item for="CreationTime" span="2"></util-description-item>
+        <util-description-item for="Remark" span="4"></util-description-item>
+    </util-description>
+</util-card>

@@ -1,0 +1,32 @@
+﻿@page
+@model IdentityResourceDto
+@*标题*@
+<page-header title="编辑身份资源" [autoBreadcrumb]="false"></page-header>
+@*表单*@
+<util-card show-border="false">
+    <util-form id="form" gutter="16" show-label="true" form-item-flex="true">
+        <util-row gutter="42">
+            <util-column span="18">
+                <util-textbox for="Uri" label-span="4" span="20"></util-textbox>
+            </util-column>
+            <util-column span="6">
+                <util-switch for="Enabled"></util-switch>
+            </util-column>
+        </util-row>
+        <util-textbox for="Name" label-span="3" span="21"></util-textbox>
+        <util-select for="Claims" url="/api/claim/all" label-span="3" span="21" tags="true"></util-select>
+        <util-row gutter="20" auto-create-column="true" column-span="6">
+            <util-switch for="Required" label-span="12"></util-switch>
+            <util-switch for="Emphasize"></util-switch>
+            <util-switch for="ShowInDiscoveryDocument"></util-switch>
+            <util-textbox for="SortId"></util-textbox>
+        </util-row>
+        <util-textarea for="Remark" label-span="3" span="21"></util-textarea>
+        <util-form-item justify="End">
+            <util-form-control class="w-auto">
+                <util-button class="mr-sm" text="取消" on-click="close()"></util-button>
+                <util-button id="btnSubmit" validate-form="true" color="Primary" on-click="submit(form,btnSubmit)"></util-button>
+            </util-form-control>
+        </util-form-item>
+    </util-form>
+</util-card>

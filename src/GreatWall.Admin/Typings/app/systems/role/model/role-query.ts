@@ -1,9 +1,9 @@
-﻿import { QueryParameter } from '../../../../util';
+﻿import { TreeQueryParameter } from '../../../../util';
 
 /**
  * 角色查询参数
  */
-export class RoleQuery extends QueryParameter {
+export class RoleQuery extends TreeQueryParameter {
     /**
      * 角色标识
      */

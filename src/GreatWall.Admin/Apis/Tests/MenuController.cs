@@ -53,6 +53,11 @@ namespace GreatWall.Apis.Tests {
                 Text = "系统菜单",
                 Children = {
                     new MenuInfo {
+                        Text = "声明",
+                        Icon = "anticon anticon-database",
+                        Link = "/systems/claim"
+                    },
+                    new MenuInfo {
                         Text = "应用程序",
                         Icon = "anticon anticon-database",
                         Link = "/systems/application"

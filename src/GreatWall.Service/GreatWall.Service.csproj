@@ -26,8 +26,8 @@ GreatWall.Service是GreatWall权限管理系统的服务层。</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Util.Applications" Version="1.9.0.7" />
-    <PackageReference Include="Util.Ui.Core" Version="1.9.0.7" />
+    <PackageReference Include="Util.Applications" Version="1.9.2.4" />
+    <PackageReference Include="Util.Ui.Core" Version="1.9.2.4" />
   </ItemGroup>
 
 </Project>

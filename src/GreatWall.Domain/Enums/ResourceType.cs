@@ -24,6 +24,16 @@ namespace GreatWall.Domain.Enums {
         /// 行集
         /// </summary>
         [Description( "行集" )]
-        Rows = 4
+        Rows = 4,
+        /// <summary>
+        /// 身份资源
+        /// </summary>
+        [Description( "身份资源" )]
+        Identity = 5,
+        /// <summary>
+        /// Api资源
+        /// </summary>
+        [Description( "Api资源" )]
+        Api = 6
     }
 }

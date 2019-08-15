@@ -18,9 +18,7 @@ namespace GreatWall.Data.Mappings.SqlServer {
         /// 映射属性
         /// </summary>
         protected override void MapProperties( EntityTypeBuilder<User> builder ) {
-            //用户标识
-            builder.Property( t => t.Id )
-                .HasColumnName( "UserId" );
+            builder.Property( t => t.Id ).HasColumnName( "UserId" );
             builder.HasQueryFilter( t => t.IsDeleted == false );
         }
     }

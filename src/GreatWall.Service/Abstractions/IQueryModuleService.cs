@@ -6,6 +6,6 @@ namespace GreatWall.Service.Abstractions {
     /// <summary>
     /// 模块查询服务
     /// </summary>
-    public interface IModuleQueryService : ITreeService<ModuleDto, ResourceQuery> {
+    public interface IQueryModuleService : ITreeService<ModuleDto, ResourceQuery> {
     }
 }
