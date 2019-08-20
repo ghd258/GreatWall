@@ -20,14 +20,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Typings\config\authorize-config.ts" />
+    <None Remove="Typings\config\config.dev.ts" />
+    <None Remove="Typings\config\config.prod.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Util.Ui.Angular.AntDesign" Version="1.9.0.7" />
+    <PackageReference Include="Util.Ui.Angular.AntDesign" Version="1.9.2.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GreatWall.Service\GreatWall.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="Typings\config\authorize-config.ts" />
+    <TypeScriptCompile Include="Typings\config\config.prod.ts" />
+    <TypeScriptCompile Include="Typings\config\config.dev.ts" />
   </ItemGroup>
 
   <ItemGroup>

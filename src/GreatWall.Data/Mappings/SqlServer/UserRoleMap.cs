@@ -1,13 +1,12 @@
 ﻿using GreatWall.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Util.Datas.Ef.SqlServer;
 
 namespace GreatWall.Data.Mappings.SqlServer {
     /// <summary>
     /// 用户角色映射配置
     /// </summary>
-    public class UserRoleMap : EntityMap<UserRole> {
+    public class UserRoleMap : Util.Datas.Ef.SqlServer.EntityMap<UserRole> {
         /// <summary>
         /// 映射表
         /// </summary>

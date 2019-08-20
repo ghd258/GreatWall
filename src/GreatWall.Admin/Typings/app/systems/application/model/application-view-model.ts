@@ -5,6 +5,10 @@
  */
 export class ApplicationViewModel extends ViewModel {
     /**
+     * 应用程序类型
+     */
+    applicationType;
+    /**
      * 应用程序编码
      */
     code;
@@ -20,6 +24,46 @@ export class ApplicationViewModel extends ViewModel {
      * 启用注册
      */
     registerEnabled;
+    /**
+     * 允许的授权类型
+     */
+    allowedGrantType;
+    /**
+     * 允许通过浏览器访问令牌
+     */
+    allowAccessTokensViaBrowser;
+    /**
+     * 允许的跨域来源
+     */
+    allowedCorsOrigins;
+    /**
+     * 需要同意
+     */
+    requireConsent;
+    /**
+     * 需要客户端密钥
+     */
+    requireClientSecret;
+    /**
+     * 客户端密钥列表
+     */
+    clientSecrets;
+    /**
+     * 认证重定向地址
+     */
+    redirectUri;
+    /**
+     * 注销重定向地址
+     */
+    postLogoutRedirectUri;
+    /**
+     * 允许的作用域
+     */
+    allowedScopes;
+    /**
+     * 访问令牌生命周期
+     */
+    accessTokenLifetime;
     /**
      * 备注
      */

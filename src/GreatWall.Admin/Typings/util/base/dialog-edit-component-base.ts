@@ -4,7 +4,7 @@
 //================================================
 import { Injector, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ViewModel } from '../index';
+import { ViewModel } from "../core/model";
 import { EditComponentBase } from "./edit-component-base";
 
 /**
@@ -30,7 +30,24 @@ export abstract class DialogEditComponentBase<TViewModel extends ViewModel> exte
             data: this.model,
             form: form,
             button: button,
-            closeDialog: true
+            closeDialog: true,
+            before: data => this.submitBefore( data ),
+            ok: result => this.submitAfter( result )
         } );
+    }
+
+    /**
+     * 提交前操作
+     * @param data 参数
+     */
+    protected submitBefore( data ) {
+        return true;
+    }
+
+    /**
+     * 提交后操作
+     * @param result 结果
+     */
+    protected submitAfter( result ) {
     }
 }

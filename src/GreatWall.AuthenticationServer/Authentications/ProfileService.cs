@@ -10,6 +10,7 @@ using IdentityServer4.Extensions;
 using IdentityServer4.Models;
 using Microsoft.AspNetCore.Identity;
 using Util;
+using Claim = System.Security.Claims.Claim;
 
 namespace GreatWall.Authentications {
     /// <summary>
@@ -27,7 +28,7 @@ namespace GreatWall.Authentications {
         /// <summary>
         /// 应用程序服务
         /// </summary>
-        private readonly IApplicationService _applicationService;
+        private readonly IQueryApplicationService _applicationService;
         /// <summary>
         /// 角色服务
         /// </summary>
@@ -41,7 +42,7 @@ namespace GreatWall.Authentications {
         /// <param name="applicationService">应用程序服务</param>
         /// <param name="roleService">角色服务</param>
         public ProfileService( IUserClaimsPrincipalFactory<User> claimsFactory, IdentityUserManager userManager,
-            IApplicationService applicationService, IRoleService roleService ) : base( userManager, claimsFactory ) {
+            IQueryApplicationService applicationService, IRoleService roleService ) : base( userManager, claimsFactory ) {
             _userManager = userManager;
             _claimsFactory = claimsFactory;
             _applicationService = applicationService;

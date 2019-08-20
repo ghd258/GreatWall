@@ -16,7 +16,7 @@ namespace GreatWall.Apis.Systems {
         /// </summary>
         /// <param name="service">模块服务</param>
         /// <param name="queryService">模块查询服务</param>
-        public ModuleController( IModuleService service, IModuleQueryService queryService ) : base( queryService ) {
+        public ModuleController( IModuleService service, IQueryModuleService queryService ) : base( queryService ) {
             ModuleService = service;
         }
 

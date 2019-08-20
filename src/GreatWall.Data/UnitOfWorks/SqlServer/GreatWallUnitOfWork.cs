@@ -2,7 +2,7 @@
 
 namespace GreatWall.Data.UnitOfWorks.SqlServer {
     /// <summary>
-    /// 工作单元
+    /// SqlServer工作单元
     /// </summary>
     public class GreatWallUnitOfWork : Util.Datas.Ef.SqlServer.UnitOfWork, IGreatWallUnitOfWork {
         /// <summary>

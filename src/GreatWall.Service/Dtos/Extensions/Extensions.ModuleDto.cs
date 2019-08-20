@@ -7,7 +7,7 @@ using Util.Maps;
 
 namespace GreatWall.Service.Dtos.Extensions {
     /// <summary>
-    /// 资源参数扩展
+    /// 模块资源参数扩展
     /// </summary>
     public static partial class Extension {
         /// <summary>

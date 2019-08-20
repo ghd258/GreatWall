@@ -24,8 +24,7 @@ GreatWall.Infrastructure是GreatWall权限管理系统的基础设施库。</Des
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Util.Core" Version="1.9.0.7" />
-    <PackageReference Include="Util.Security" Version="1.9.0.7" />
+    <PackageReference Include="Util.Security" Version="1.9.2.4" />
   </ItemGroup>
 
   <ItemGroup>

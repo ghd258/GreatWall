@@ -1,6 +1,5 @@
 ﻿using System;
 using GreatWall.Data;
-using GreatWall.Data.UnitOfWorks.SqlServer;
 using GreatWall.Service.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -51,11 +50,13 @@ namespace GreatWall {
             //添加NLog日志操作
             services.AddNLog();
 
-            //添加EF工作单元
-            services.AddUnitOfWork<IGreatWallUnitOfWork, GreatWallUnitOfWork>( Configuration.GetConnectionString( "DefaultConnection" ) );
+            //添加SqlServer工作单元
+            services.AddUnitOfWork<IGreatWallUnitOfWork, Data.UnitOfWorks.SqlServer.GreatWallUnitOfWork>( Configuration.GetConnectionString( "DefaultConnection" ) );
+            //添加PgSql工作单元
+            //services.AddUnitOfWork<IGreatWallUnitOfWork, Data.UnitOfWorks.PgSql.GreatWallUnitOfWork>( Configuration.GetConnectionString( "PgSqlConnection" ) );
 
             //添加权限服务
-            services.AddPermission( t => { t.Lockout.MaxFailedAccessAttempts = 2; } );
+            services.AddPermission();
 
             //添加认证
             services.AddAuthentication( t => t.DefaultAuthenticateScheme = "Bearer" )

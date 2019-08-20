@@ -35,6 +35,12 @@ GreatWall.Domain是GreatWall权限管理系统的业务层。
     <Compile Update="Models/Module.*.cs">
       <DependentUpon>Module.cs</DependentUpon>
     </Compile>
+    <Compile Update="Models/IdentityResource.*.cs">
+      <DependentUpon>IdentityResource.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Models/ApiResource.*.cs">
+      <DependentUpon>ApiResource.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>

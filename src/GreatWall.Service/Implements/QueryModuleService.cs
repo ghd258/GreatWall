@@ -17,14 +17,14 @@ namespace GreatWall.Service.Implements {
     /// <summary>
     /// 模块查询服务
     /// </summary>
-    public class ModuleQueryService : TreeServiceBase<ResourcePo, ModuleDto, ResourceQuery>, IModuleQueryService {
+    public class QueryModuleService : TreeServiceBase<ResourcePo, ModuleDto, ResourceQuery>, IQueryModuleService {
         /// <summary>
         /// 初始化资源服务
         /// </summary>
         /// <param name="unitOfWork">工作单元</param>
         /// <param name="resourceStore">资源存储器</param>
         /// <param name="moduleRepository">模块仓储</param>
-        public ModuleQueryService( IGreatWallUnitOfWork unitOfWork, IResourcePoStore resourceStore, IModuleRepository moduleRepository )
+        public QueryModuleService( IGreatWallUnitOfWork unitOfWork, IResourcePoStore resourceStore, IModuleRepository moduleRepository )
             : base( unitOfWork, resourceStore ) {
             UnitOfWork = unitOfWork;
             ResourceStore = resourceStore;
